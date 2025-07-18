@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatish Balaji Ganesan - Portfolio</title>
+    <script>
+      tailwind.config = {
+        darkMode: 'class'
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* background-color: #111827;  Dark Blue-Gray Background */
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .skill-tag {
+            background-color: #1f2937;
+            color: #d1d5db;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid #374151;
+        }
+        .skill-tag:hover {
+            background-color: #374151;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            border-radius: 2px;
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text">YBG</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="hover:text-sky-400 transition-colors duration-300">About</a>
+                <a href="#projects" class="hover:text-sky-400 transition-colors duration-300">Projects</a>
+                <a href="#experience" class="hover:text-sky-400 transition-colors duration-300">Experience</a>
+                <a href="#certifications" class="hover:text-sky-400 transition-colors duration-300">Certifications</a>
+                <a href="#contact" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded-full transition-all duration-300">Contact</a>
+                <a href="resume.pdf" download class="ml-4 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-full transition-all duration-300">Download Resume</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800/90 backdrop-blur-sm">
+             <a href="#about" class="block text-center py-3 px-4 hover:bg-gray-700 transition-colors duration-300">About</a>
+             <a href="#projects" class="block text-center py-3 px-4 hover:bg-gray-700 transition-colors duration-300">Projects</a>
+             <a href="#experience" class="block text-center py-3 px-4 hover:bg-gray-700 transition-colors duration-300">Experience</a>
+             <a href="#certifications" class="block text-center py-3 px-4 hover:bg-gray-700 transition-colors duration-300">Certifications</a>
+             <a href="#contact" class="block text-center py-3 px-4 hover:bg-gray-700 transition-colors duration-300">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-24">
+
+        <!-- Hero Section -->
+        <section id="about" class="container mx-auto px-6 py-20 md:py-32">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Text Content -->
+                <div class="md:w-3/5 text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                        Yatish Balaji <span class="gradient-text">Ganesan</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-300 mb-6">Computer Science Engineer | AI & UI/UX Enthusiast</h2>
+                    <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto md:mx-0">
+                        Motivated and creative graduate with a strong foundation in programming, artificial intelligence, and UI/UX design. Eager to contribute to innovative software projects and grow as a developer in a dynamic tech environment.
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="https://www.linkedin.com/in/yatish-balaji-g-372b71245" target="_blank" class="text-gray-400 hover:text-sky-400 transition-colors duration-300">
+                            <i data-lucide="linkedin" class="w-8 h-8"></i>
+                        </a>
+                        <a href="https://github.com/yatish2136" target="_blank" class="text-gray-400 hover:text-sky-400 transition-colors duration-300">
+                            <i data-lucide="github" class="w-8 h-8"></i>
+                        </a>
+                        <a href="mailto:yatish2136@gmail.com" class="text-gray-400 hover:text-sky-400 transition-colors duration-300">
+                            <i data-lucide="mail" class="w-8 h-8"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Profile Photo -->
+                <div class="md:w-2/5 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80">
+                        <div class="absolute inset-0 bg-gradient-to-br from-sky-500 to-indigo-600 rounded-full blur-2xl opacity-50"></div>
+                        <img src="profile.JPG" alt="Yatish Balaji Ganesan" class="relative w-full h-full object-cover object-center rounded-full border-4 border-gray-700 shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="bg-gray-900/50 py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 section-title">Technical Skills</h2>
+                <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">AI/ML Concepts</span>
+                    <span class="skill-tag">UI/UX Design</span>
+                    <span class="skill-tag">Canva</span>
+                    <span class="skill-tag">Wireframing</span>
+                    <span class="skill-tag">Postman</span>
+                    <span class="skill-tag">Google Cloud Platform (GCP)</span>
+                    <span class="skill-tag">API Automation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-effect rounded-xl p-6 flex flex-col">
+                        <h3 class="text-xl font-bold text-sky-400 mb-2">Deepfake Detection System</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">Developed an AI-based system to detect deepfake videos and manipulated images using CNNs to analyze facial patterns and ensure digital media integrity.</p>
+                        <div class="mt-auto">
+                           <p class="text-sm text-gray-500 font-semibold">Key Learnings: CNNs, Image Preprocessing, Evaluation Metrics, Ethical AI.</p>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card glass-effect rounded-xl p-6 flex flex-col">
+                        <h3 class="text-xl font-bold text-sky-400 mb-2">Student Contribution System</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">Designed a Java desktop application to record and evaluate individual contributions in group projects, using Java Swing for UI and JDBC for MySQL integration.</p>
+                         <div class="mt-auto">
+                           <p class="text-sm text-gray-500 font-semibold">Key Learnings: OOP, Modular Code, Full-Stack Development, Java Swing.</p>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card glass-effect rounded-xl p-6 flex flex-col">
+                        <h3 class="text-xl font-bold text-sky-400 mb-2">AI Smart Mentor</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">Built a conversational assistant to guide students on academic paths and course selection, using basic NLP for intent recognition and response generation.</p>
+                         <div class="mt-auto">
+                           <p class="text-sm text-gray-500 font-semibold">Key Learnings: NLP, Rapid Prototyping, Interactive UX Design.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="bg-gray-900/50 py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title">Internship Experience</h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="glass-effect p-8 rounded-xl flex gap-x-6">
+                        <!-- Decorative Line -->
+                        <div class="w-1 bg-gradient-to-b from-sky-500 to-indigo-600 rounded-full flex-shrink-0"></div>
+                        <!-- Content -->
+                        <div class="flex-grow">
+                            <div class="mb-6">
+                                <h3 class="text-2xl font-bold text-white">Software Engineering Intern</h3>
+                                <p class="text-lg font-semibold text-sky-400 mb-1">ZOHO CORPORATION - Chennai</p>
+                                <p class="text-md text-gray-400">June 2025 - July 2025</p>
+                            </div>
+                            <ul class="list-disc list-outside pl-5 text-gray-300 space-y-3">
+                                <li>Automated GCP monitor setup using Postman and OAuth 2.0 token refresh mechanisms.</li>
+                                <li>Integrated Site24x7 & Zoho APIs for managing over 15 GCP services efficiently.</li>
+                                <li>Built robust test scripts to handle token expiry, request retries, and environment variables.</li>
+                                <li>Gained hands-on experience in API automation and complex cloud monitoring workflows.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Workshops Section -->
+        <section id="certifications" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title">Certifications & Workshops</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Infosys Certifications Card -->
+                    <div class="glass-effect rounded-xl p-6">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="award" class="w-8 h-8 text-sky-400"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Online Courses</h3>
+                                <p class="text-gray-400">Infosys Springboard</p>
+                            </div>
+                        </div>
+                        <ul class="list-disc list-outside pl-5 text-gray-300 space-y-2">
+                            <li>Java Programming Fundamentals</li>
+                            <li>Basics of Python</li>
+                            <li>Java IO with Case Studies</li>
+                            <li>Multithreading in Java</li>
+                        </ul>
+                    </div>
+                    <!-- Udemy Certifications Card -->
+                    <div class="glass-effect rounded-xl p-6">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="award" class="w-8 h-8 text-sky-400"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Online Courses</h3>
+                                <p class="text-gray-400">Udemy</p>
+                            </div>
+                        </div>
+                        <ul class="list-disc list-outside pl-5 text-gray-300 space-y-2">
+                            <li>UI/UX with Figma and Adobe XD</li>
+                            <li>Figma Essential for UI/UX</li>
+                        </ul>
+                    </div>
+                    <!-- Workshops Card -->
+                     <div class="glass-effect rounded-xl p-6">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="users-2" class="w-8 h-8 text-sky-400"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Workshops</h3>
+                                <p class="text-gray-400">IIT Madras</p>
+                            </div>
+                        </div>
+                        <ul class="list-disc list-outside pl-5 text-gray-300 space-y-2">
+                            <li>App Development Workshop</li>
+                            <li>Blockchain Development Workshop</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="bg-gray-900/50 py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 section-title">Get In Touch</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto mb-8">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out!
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                    <a href="mailto:yatish2136@gmail.com" class="inline-flex items-center gap-3 text-lg font-semibold bg-gray-800 hover:bg-gray-700 border border-gray-600 px-6 py-3 rounded-lg transition-colors duration-300">
+                        <i data-lucide="mail" class="w-5 h-5 text-sky-400"></i>
+                        yatish2136@gmail.com
+                    </a>
+                     <a href="tel:+919840101972" class="inline-flex items-center gap-3 text-lg font-semibold bg-gray-800 hover:bg-gray-700 border border-gray-600 px-6 py-3 rounded-lg transition-colors duration-300">
+                        <i data-lucide="phone" class="w-5 h-5 text-sky-400"></i>
+                        +91-9840101972
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 Yatish Balaji Ganesan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
